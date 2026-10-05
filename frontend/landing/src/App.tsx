@@ -1,5 +1,7 @@
-const SELLER_URL = import.meta.env.VITE_SELLER_PORTAL_URL || "http://localhost:5173";
-const BUYER_URL = import.meta.env.VITE_BUYER_PORTAL_URL || "http://localhost:5174";
+// Follow the host the page was opened from so the links also work from other devices.
+const HOST = `${window.location.protocol}//${window.location.hostname}`;
+const SELLER_URL = import.meta.env.VITE_SELLER_PORTAL_URL || `${HOST}:5173`;
+const BUYER_URL = import.meta.env.VITE_BUYER_PORTAL_URL || `${HOST}:5174`;
 
 export default function App() {
   return (

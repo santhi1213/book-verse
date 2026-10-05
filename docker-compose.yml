@@ -43,11 +43,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5172:5172"
-    environment:
-      VITE_API_BASE_URL: http://localhost:5000/api/v1
-      VITE_LANDING_URL: http://localhost:5172
-      VITE_SELLER_PORTAL_URL: http://localhost:5173
-      VITE_BUYER_PORTAL_URL: http://localhost:5174
     depends_on:
       - backend
     volumes:
@@ -60,11 +55,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5174:5174"
-    environment:
-      VITE_API_BASE_URL: http://localhost:5000/api/v1
-      VITE_LANDING_URL: http://localhost:5172
-      VITE_SELLER_PORTAL_URL: http://localhost:5173
-      VITE_BUYER_PORTAL_URL: http://localhost:5174
     depends_on:
       - backend
     volumes:
@@ -77,11 +67,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5173:5173"
-    environment:
-      VITE_API_BASE_URL: http://localhost:5000/api/v1
-      VITE_LANDING_URL: http://localhost:5172
-      VITE_SELLER_PORTAL_URL: http://localhost:5173
-      VITE_BUYER_PORTAL_URL: http://localhost:5174
     depends_on:
       - backend
     volumes:

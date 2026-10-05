@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  server: { port: 5172 },
+  server: { host: true, port: 5172, strictPort: true },
   resolve: {
     alias: {
       "@shared": path.resolve(__dirname, "../shared"),

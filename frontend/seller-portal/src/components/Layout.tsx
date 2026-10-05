@@ -1,8 +1,7 @@
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { LANDING_URL } from "@shared/urls";
 import { useAuth } from "../context/AuthContext";
 import { IconBooks, IconDashboard, IconOrders, IconPlus, IconStack, IconStar } from "./Icons";
-
-const LANDING_URL = import.meta.env.VITE_LANDING_URL || "http://localhost:5172";
 
 export function Layout() {
   const { user, logout } = useAuth();

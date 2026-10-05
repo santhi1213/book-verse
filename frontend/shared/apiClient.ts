@@ -1,7 +1,6 @@
 import { clearTokens, getAccessToken, getRefreshToken, setTokens } from "./auth";
 import type { ApiError, LoginResponse, User } from "./types";
-
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:5000/api/v1";
+import { API_BASE_URL as API_BASE } from "./urls";
 
 let refreshPromise: Promise<string | null> | null = null;
 

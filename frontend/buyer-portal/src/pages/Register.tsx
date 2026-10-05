@@ -1,10 +1,9 @@
 import { useState, type FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authApi } from "@shared/apiClient";
+import { LANDING_URL } from "@shared/urls";
 import { IconArrowLeft } from "../components/Icons";
 import { PasswordInput } from "../components/PasswordInput";
-
-const LANDING_URL = import.meta.env.VITE_LANDING_URL || "http://localhost:5172";
 
 export function Register() {
   const navigate = useNavigate();

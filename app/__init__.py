@@ -26,14 +26,11 @@ def create_app(config_name=None):
     migrate.init_app(app, db)
     jwt.init_app(app)
 
-    # origins = [o.strip() for o in app.config["CORS_ORIGINS"].split(",") if o.strip()]
-    origins = app.config["CORS_ORIGINS"]
-    # CORS(app, origins=origins, supports_credentials=True)
     CORS(
-    app,
-    origins=app.config["CORS_ORIGINS"],
-    supports_credentials=True,
-)
+        app,
+        origins=app.config["CORS_ORIGINS"] + app.config["CORS_ORIGIN_PATTERNS"],
+        supports_credentials=True,
+    )
 
     register_error_handlers(app)
 
